@@ -40,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
         GameSetting();
         PlayGame();
 
+        btnRestart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GameSetting();
+                PlayGame();
+
+            }
+        });
+
     }
 
     //게임을 시작시키는 함수
@@ -89,6 +98,9 @@ public class MainActivity extends AppCompatActivity {
         score = 0;
         clickNum = 0;
         flipedBtnCount = 0;
+
+        tvScore.setText("점수 : 0점");
+        tvClick.setText("클릭 수 : 0번");
 
         for(int i = 0; i<20; i++){
             btnArray[i].setBackgroundColor(0xffeaded2);
