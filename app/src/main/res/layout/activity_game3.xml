@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ad9d8f"
-    tools:context=".Game2Activity">
+    tools:context=".Game3Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="h, 2:3"
+        app:layout_constraintDimensionRatio="h, 3:4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -23,7 +23,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn201"
+                android:id="@+id/btn301"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="3dp"
@@ -31,22 +31,7 @@
                 android:background="#eaded2" />
 
             <Button
-                android:id="@+id/btn202"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:layout_weight="1"
-                android:background="#eaded2" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn203"
+                android:id="@+id/btn302"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="3dp"
@@ -54,7 +39,7 @@
                 android:background="#eaded2" />
 
             <Button
-                android:id="@+id/btn204"
+                android:id="@+id/btn303"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="3dp"
@@ -69,7 +54,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn205"
+                android:id="@+id/btn304"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="3dp"
@@ -77,7 +62,77 @@
                 android:background="#eaded2" />
 
             <Button
-                android:id="@+id/btn206"
+                android:id="@+id/btn305"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#eaded2" />
+
+            <Button
+                android:id="@+id/btn306"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#eaded2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn307"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#eaded2" />
+
+            <Button
+                android:id="@+id/btng308"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#eaded2" />
+
+            <Button
+                android:id="@+id/btn309"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#eaded2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn310"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#eaded2" />
+
+            <Button
+                android:id="@+id/btn311"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#eaded2" />
+
+            <Button
+                android:id="@+id/btn312"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="3dp"
@@ -88,7 +143,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_score2"
+        android:id="@+id/tv_score3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -101,7 +156,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_restart2"
+        android:id="@+id/btn_restart3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -112,7 +167,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_clicked2"
+        android:id="@+id/tv_clicked3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -122,10 +177,10 @@
         android:textSize="22dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_score2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_score3" />
 
     <RelativeLayout
-        android:id="@+id/rl2"
+        android:id="@+id/rl3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -134,7 +189,7 @@
         android:visibility="gone">
 
         <Button
-            android:id="@+id/btn_next2"
+            android:id="@+id/btn_next3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"

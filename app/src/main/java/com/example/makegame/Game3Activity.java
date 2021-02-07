@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity {
+public class Game3Activity extends AppCompatActivity {
 
     List<Integer> imgBatch = new ArrayList<>();
     Button[] btnArray;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_game3);
 
         Data_Setting();
         Restart_Setting();
@@ -46,17 +46,22 @@ public class MainActivity extends AppCompatActivity {
     private void Data_Setting() {
         imgBatch.clear();
         imgBatch.add(R.drawable.img0);imgBatch.add(R.drawable.img1);imgBatch.add(R.drawable.img2);
+        imgBatch.add(R.drawable.img3);imgBatch.add(R.drawable.img4);imgBatch.add(R.drawable.img5);
         imgBatch.add(R.drawable.img0);imgBatch.add(R.drawable.img1);imgBatch.add(R.drawable.img2);
+        imgBatch.add(R.drawable.img3);imgBatch.add(R.drawable.img4);imgBatch.add(R.drawable.img5);
 
-        btnArray = new Button[]{findViewById(R.id.btn201),findViewById(R.id.btn202),findViewById(R.id.btn203),
-                findViewById(R.id.btn204),findViewById(R.id.btn205),findViewById(R.id.btn206)};
+        btnArray = new Button[]{findViewById(R.id.btn301),findViewById(R.id.btn302),findViewById(R.id.btn303),
+                findViewById(R.id.btn304),findViewById(R.id.btn305),findViewById(R.id.btn306),
+                findViewById(R.id.btn307),findViewById(R.id.btng308),findViewById(R.id.btn309),
+                findViewById(R.id.btn310),findViewById(R.id.btn311),findViewById(R.id.btn312)};
 
-        rl = findViewById(R.id.rl2);
-        btnNext = findViewById(R.id.btn_next2);
-        tvScore = findViewById(R.id.tv_score2);
-        tvClicked = findViewById(R.id.tv_clicked2);
+        rl = findViewById(R.id.rl3);
+        btnNext = findViewById(R.id.btn_next3);
+        tvScore = findViewById(R.id.tv_score3);
+        tvClicked = findViewById(R.id.tv_clicked3);
 
-        btnFliped = new boolean[]{false, false, false, false, false, false};
+        btnFliped = new boolean[]{false, false, false, false, false, false, false, false, false, false,
+                false, false};
 
         flipedBtnCount = 0;
 
@@ -67,13 +72,13 @@ public class MainActivity extends AppCompatActivity {
 
         Collections.shuffle(imgBatch);
 
-        for(int i=0;i<6;i++)
+        for(int i=0;i<12;i++)
             btnArray[i].setBackgroundColor(0xffeaded2);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Game3Activity.class);
+                Intent intent = new Intent(Game3Activity.this, Game4Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -81,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Restart_Setting() {
-        btnRestart = findViewById(R.id.btn_restart2);
+        btnRestart = findViewById(R.id.btn_restart3);
 
         btnRestart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Play_Game() {
-        for(int i=0;i<6;i++) {
+        for(int i=0;i<12;i++) {
             final int pos = i;
             btnArray[pos].setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -116,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                                 score += 10;
                                 tvScore.setText("점수 : "+score+"점");
 
-                                if(score == 30) {
+                                if(score == 60) {
                                     Toast.makeText(getApplicationContext(), "게임 끝. 클릭 횟수 : " + clickNum + "번", Toast.LENGTH_SHORT).show();
                                     rl.setVisibility(View.VISIBLE);
                                 }
